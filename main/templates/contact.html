@@ -1,0 +1,208 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Bavithy site</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="templatemo">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- animate -->
+	<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<!-- font-awesome -->
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<!-- google font -->
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,800' rel='stylesheet' type='text/css'>
+	<!-- custom -->
+	<link rel="stylesheet" href="{% static 'css/templatemo-style.css' %}">
+
+</head>
+
+<body>
+
+    <!-- Écran de chargement -->
+    <div id="loading">
+        <img src="{% static 'images/logo.png' %}" alt="Logo services bahani vissiley">
+		<img src="{% static 'images/loading.svg' %}" alt="SVG chargement">
+    </div>
+
+
+    <div id="content" style="display: none;">
+        <!-- start home -->
+        <section class="head">
+            <div class="header-others">
+                <div class="header_nav">
+                    <img class="logo" src="{% static 'images/logo-lt.png' %}" alt="Logo services bahani vissiley">
+                    <ul id="icon" class="nav justify-content-center">
+                        <div onclick="HideMenu()" class="close-btn-menu">✖</div>
+                        <li class="nav-item">
+							<a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'home' %}">Services</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'blog' %}">Blog</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="{% url 'contact' %}">Contact</a>
+						</li>
+                    </ul>
+                    <a href="#" class="buttonContact">Me contacter</a>
+                    <div class="menu-icon" onclick="toggleMenu()">
+                        ☰
+                    </div>
+                </div>
+
+
+                <div class="container hero">
+                    <!-- Texte principal -->
+                    <div class="hero-content">
+                        <h1 class="title reveal-2">Contact</h1>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+        <!-- end home -->
+
+
+        <section>
+            <div class="container contact-container">
+                <!-- Contact Form -->
+                <div class="row cadre">
+                    <div class="col-md-6 contact-form">
+                        <h2>Travaillons ensemble !</h2>
+                        <p>Pour tout besoin, vous pouvez me connecter via se formulaire</p>
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Nom" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Prenom">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="email" placeholder="Adresse" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" placeholder="Numéro de téléphone" required>
+                                </div>
+                            </div>
+                            <textarea placeholder="Message" required></textarea>
+                            <button type="submit">Envoyez message</button>
+                        </form>
+                    </div>
+    
+                    <!-- Contact Details -->
+                    <div class="col-md-6 contact-details">
+                        <div class="detail-item">
+                            <i class="fa fa-phone"></i>
+                            <div class="info">
+                                <h6>Téléphone</h6>
+                                <p>+237 690-259-137</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa fa-envelope-o"></i>
+                            <div class="info">
+                                <h6>Email</h6>
+                                <p>bahanivissiley@outlook.com</p>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fa fa-map-marker"></i>
+                            <div class="info">
+                                <h6>Adresse</h6>
+                                <p>Yaoundé cameroun, Mfandena Rue 1.603</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- Start Footer -->
+        <footer class="footer text-white">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <!-- Logo et description -->
+                    <div class="col-md-6">
+                        <h5 class="text-uppercase">bavithy it</h5>
+                        <p>
+                            Ne ratez aucune de nos actualites en vous abonnant sur notre newsletter.
+                        </p>
+                        <form class="d-flex">
+                            <input type="email" class="form-control" placeholder="Entrer votre mail">
+                            <button class="btn btn-primary" type="submit">Souscrire</button>
+                        </form>
+                    </div>
+                    <!-- Contacts -->
+                    <div class="col-md-3">
+                        <h5 class="text-uppercase">Contacts</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+                            <li><a href="#" class="text-white text-decoration-none me-3"><i
+                                        class="fa fa-instagram"></i></a>
+                                <a href="#" class="text-white text-decoration-none me-3"><i
+                                        class="fa fa-github"></i></a>
+                                <a href="#" class="text-white text-decoration-none"><i
+                                        class="fa fa-linkedin"></i></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Légal -->
+                    <div class="col-md-3">
+                        <h5 class="text-uppercase">Légal</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white text-decoration-none">Confidentialité</a></li>
+                            <li><a href="#" class="text-white text-decoration-none">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Copyright -->
+                    <div class="col-sm-12 text-center text-md-start">
+                        <p class="mb-0">&copy; 2024 Thinkbav. Conçu par Bahani vissiley thierry</p>
+                    </div>
+                    <!-- Réseaux sociaux -->
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- end footer -->
+    <!-- jQuery -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/custom.js' %}"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+</body>
+
+</html>
